@@ -11,4 +11,14 @@ $ docker run -ti ubuntu:22.04 - parametro -ti para lançar um terminal e interag
     RUN apt-get git -y
 $ docker ps - via terminal lista o containers em execução
 $ docker stop+id do container - via terminal para container em execução
+
+#No exemplo abaixo o Dockerfile-nginx sobe a imagem a partir do nginx (que tb é referenciado no docker hub) copiando a pasta local meu_html e seu conteudo para o destino html do pr[oprio nginx,
+após o build do container (meu-nginx) com parametro -f especificando que é a partir do dockerfile-nginx, e depois o run com parâmetros -d (desattached) e -p indicando a porta TCP.
+
+Dockerfile-nginx
+FROM nginx
+COPY meu_html /usr/share/nginx/html
+
+$ docker build -t meu-nginx -f Dockerfile-nginx .
+$ docker run -d -p 8082:80 meu-nginx 
   
