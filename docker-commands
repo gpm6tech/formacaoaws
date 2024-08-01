@@ -4,8 +4,9 @@ $ docker run -ti ubuntu:22.04 - parametro -ti para lançar um terminal e interag
     FROM ubuntu:22.04 - $ docker build -t aula-docker .   - roda a imagem e o ponto no final aponta o contexto para saber de onde serão referenciadas as informações para construir a imagem, procurando assim no diretório atual pelo arquivo dockerfile
                         $ docker run -ti aula-docker     - executa o container com base na imagem construída a partir do ubunt 22.04, neste caso posso criar pastas e arquivos de teste, porém ao sair (exit)
                                                           do container essas alterações não persistiram pois único parâmetro que existe no dockerfile é a criação da imagem a partir do ubuntu, com isso tudo
-                                                          que eu quiser que exista no meu container precisa existir no dockerfile.
-                                                
+                                                          que eu quiser que exista no meu container precisa existir no dockerfile no momento da criação da imagem.
+    COPY . .  - esse comando ponto e ponto copia tudo que está local para dentro do container na sua criação
+    COPY teste . - esse outro exemplo copiando o conteudo de uma pasta local para dentro do container na sua criação
 $ docker ps - via terminal lista o containers em execução
 $ docker stop+id do container - via terminal para container em execução
   
