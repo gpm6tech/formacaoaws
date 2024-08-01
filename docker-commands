@@ -1,3 +1,7 @@
-$ docker run ubuntu:22.04 - rodando container com base na imagem ubuntu 22.04 baixando do docker hub com a tag da versão específica
+$ docker run ubuntu:22.04 - rodando container com base na imagem ubuntu 22.04 baixando do docker hub com a tag da versão específica - direto no terminal do vs code
 $ docker run -ti ubuntu:22.04 - parametro -ti para lançar um terminal e interagir com o container
-
+  $ Dockerfile - utilizado para construir/personalizar a imagem (criando um arquivo na pasta de tabalho atual no vs code)
+    FROM ubuntu:22.04 - $ docker build -t aula-docker .   - roda a imagem e o ponto no final aponta o contexto para saber de onde serão referenciadas as informações para construir a imagem, procurando assim no diretório atual pelo arquivo dockerfile
+                        $ docker run -ti aula-docker     - executa o container 
+                        $ docker ps
+  
