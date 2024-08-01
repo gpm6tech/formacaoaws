@@ -1,1 +1,3 @@
+$ docker run ubuntu:22.04 - rodando container com base na imagem ubuntu 22.04 baixando do docker hub com a tag da versão específica
+$ docker run -ti ubuntu:22.04 - parametro -ti para lançar um terminal e interagir com o container
 
