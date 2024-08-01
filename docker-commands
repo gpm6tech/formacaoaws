@@ -7,6 +7,8 @@ $ docker run -ti ubuntu:22.04 - parametro -ti para lançar um terminal e interag
                                                           que eu quiser que exista no meu container precisa existir no dockerfile no momento da criação da imagem.
     COPY . .  - esse comando ponto e ponto copia tudo que está local para dentro do container na sua criação
     COPY teste . - esse outro exemplo copiando o conteudo de uma pasta local para dentro do container na sua criação
+    RUN apt-get update -y - exemplo de evolução da imagem instalando o git
+    RUN apt-get git -y
 $ docker ps - via terminal lista o containers em execução
 $ docker stop+id do container - via terminal para container em execução
   
