@@ -22,3 +22,12 @@ COPY meu_html /usr/share/nginx/html
 $ docker build -t meu-nginx -f Dockerfile-nginx .
 $ docker run -d -p 8082:80 meu-nginx 
   
+LISTA COMANDOS DOCKER
+1 - docker run : executar a sua imagem (-d roda em segundo plano) (--rm quando parar o container ele descarta totalmente container) (--name adiciona nome ao container) (-p adiciona porta) (-v utilizando volume)
+2 - docker ps : listar os containers em execução (-a mostra os containers que estão parados) 
+3 - docker stop/start : para/ligar o container (nome/id/parte do id para parar container)
+4 - docker rm  : para o container manualmente (para não constar como parado)
+5 - docker pull : baixa imagem sem rodar, utilizando o tag (docker pul httpd:latest)
+6 - docker exec : executar algum comendo no container, ex: entar via bash   (-ti nome/ID bash)
+7 - docker 
+8 - docker
