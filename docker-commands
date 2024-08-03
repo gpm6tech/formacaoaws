@@ -44,6 +44,6 @@ LISTA COMANDOS DOCKER COMPOSE
 6 - docker compose -f docker-compose.aws.yml build server : (subindo o projeto usando um dockercompose + dockerfile customizado (build) ex. com alterações para testes)
 7 - docker compose -f docker-compose.aws.yml exec server /bin/bash : entrando no container (no serviço naquele path) sem necessidade de saber nome ou ID do container
 8 - customizar nome do container : container_name bia / db_bia (dentro do códia do docker-compose.aws.yml - versão customizada)
-9 - trabalhando com argumentos : no momento do build passando a inofrmações da API URL (args: API_URL: http://.....)
+9 - trabalhando com argumentos : no momento do build passando a inoformações da API URL (args: API_URL: http://.....) após executa docker compose -f docker-compose.aws.yml huild server
 
 
