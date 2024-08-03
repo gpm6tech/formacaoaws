@@ -33,3 +33,17 @@ LISTA COMANDOS DOCKER
 8 - docker inspect : Inpecionar um determninado recuros, ex. onde está o meu volume?
 9 - docker logs : mostra os logs da execução do container (+ iniciais do container ID) (-f mostra logs em tempo real)
 10 - docker --help : lista de comando com as descrições de uso
+
+$ git clone https://github.com/henrylle/bia aula-docker-compose (baixando o projeto da bia (na pasta aula-docker -compose) para exemplificar comandos)
+LISTA COMANDOS DOCKER COMPOSE
+1 - docker compose up -d : subir o projeto
+2 - docker-compose exec server bash -c 'npx sequelize db:migrate' : comando para persistir dados na bia (específico da bia)
+3 - docker compose down : parar o projeto
+4 - docker compose down -v : para o projeto apagando o volume (e não mais irá persistir os dado na app)
+5 - docker compose -f docker-compose.aws.yml up (subindo o projeto usando um dockercompose customizado ex. com alterações para testes) (-d modo detached)
+6 - docker compose -f docker-compose.aws.yml build server : (subindo o projeto usando um dockercompose + dockerfile customizado (build) ex. com alterações para testes)
+7 - docker compose -f docker-compose.aws.yml exec server /bin/bash : entrando no container (no serviço naquele path) sem necessidade de saber nome ou ID do container
+8 - customizar nome do container : container_name bia / db_bia (dentro do códia do docker-compose.aws.yml - versão customizada)
+9 - trabalhando com argumentos : no momento do build passando a inofrmações da API URL (args: API_URL: http://.....)
+
+
