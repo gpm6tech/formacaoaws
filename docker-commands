@@ -34,8 +34,11 @@ LISTA COMANDOS DOCKER
 9 - docker logs : mostra os logs da execução do container (+ iniciais do container ID) (-f mostra logs em tempo real)
 10 - docker --help : lista de comando com as descrições de uso
 
+
 $ git clone https://github.com/henrylle/bia aula-docker-compose (baixando o projeto da bia (na pasta aula-docker -compose) para exemplificar comandos)
-LISTA COMANDOS DOCKER COMPOSE
+
+LISTA COMANDOS DOCKER COMPOSE (Docker composer orquestra multi-containers)
+
 1 - docker compose up -d : subir o projeto
 2 - docker-compose exec server bash -c 'npx sequelize db:migrate' : comando para persistir dados na bia (específico da bia)
 3 - docker compose down : parar o projeto
